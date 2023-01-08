@@ -3,8 +3,6 @@ import sys
 
 import pygame
 
-from scripts.create_levels import generate_level, load_level
-
 
 def load_image(name, size, colorkey=None):
     fullname = os.path.join('../data', name)
@@ -17,13 +15,14 @@ def load_image(name, size, colorkey=None):
 
 
 if __name__ == '__main__':
-    from variables import WIDTH, HEIGHT, player_group, all_sprites, tiles_group, enemies_group, FPS, WHITE
+    from variables import WIDTH, HEIGHT, all_sprites, FPS, WHITE
+    from scripts.create_levels import generate_level, load_level
     pygame.init()
     pygame.mixer.init()
     screen = pygame.display.set_mode((WIDTH, HEIGHT))
     pygame.display.set_caption("SnowFight")
     clock = pygame.time.Clock()
-    player, level_x, level_y = generate_level(load_level('first'), player_group, all_sprites, tiles_group, enemies_group)
+    player, level_x, level_y = generate_level(load_level('first'))
     running = True
     while running:
         clock.tick(FPS)
