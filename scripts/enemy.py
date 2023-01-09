@@ -20,6 +20,7 @@ class Enemy(pygame.sprite.Sprite):
         self.rect.centery = tile_height * y + 5
         self.speed_x = 0
         self.speed_y = 0
+        self.health = 6
 
     def update(self):
         bx, by = self.player.rect.centerx, self.player.rect.centery
@@ -38,3 +39,8 @@ class Enemy(pygame.sprite.Sprite):
             self.rect = old_rect
         if self.rect.bottom > HEIGHT:
             self.rect.bottom = HEIGHT
+
+    def hit(self):
+        self.health -= 1
+        if self.health == 0:
+            self.kill()
