@@ -1,6 +1,6 @@
 import pygame
 
-from variables import tile_images, tile_width, tile_height
+from scripts.variables import tile_images, tile_width, tile_height
 
 
 class Tile(pygame.sprite.Sprite):

@@ -2,7 +2,7 @@ import math
 
 import pygame
 
-from variables import enemy_image, tile_width, tile_height, enemies_group, all_sprites, tiles_group, HEIGHT
+from scripts.variables import enemy_image, tile_width, tile_height, enemies_group, all_sprites, tiles_group, HEIGHT
 
 
 class Enemy(pygame.sprite.Sprite):
@@ -44,3 +44,5 @@ class Enemy(pygame.sprite.Sprite):
         self.health -= 1
         if self.health == 0:
             self.kill()
+        if not enemies_group:
+            return

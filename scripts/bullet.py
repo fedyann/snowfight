@@ -2,8 +2,7 @@ import math
 
 import pygame
 
-from variables import bullets_group, all_sprites, bullet_image, HEIGHT, tiles_group, bullet_width, bullet_height, \
-    player_group, enemies_group
+from scripts.variables import bullets_group, all_sprites, bullet_image, HEIGHT, tiles_group, enemies_group
 
 
 class Bullet(pygame.sprite.Sprite):
