@@ -37,7 +37,7 @@ player_group = pygame.sprite.Group()
 enemies_group = pygame.sprite.Group()
 bullets_group = pygame.sprite.Group()
 bullet_speed = 10
-LEVELS = ['first', 'second', 'third']
+LEVELS = ['first', 'second', 'third', 'fourth']
 
 
 def clear_groups():
