@@ -1,1 +1,1 @@
-snowfight
+Игра "snowfight" на pygame
